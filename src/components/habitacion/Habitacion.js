@@ -20,8 +20,8 @@ const list = [
 
 ];
 
-const limit = 2;
-const pageCount = 3;
+const limit = 1;
+const pageCount = 1;
 const total = list.length * limit;
 
 class Habitacion extends Component {
@@ -53,7 +53,7 @@ class Habitacion extends Component {
         }
         return (
             <div>
-                {list.map((d, index) =>
+               
                 <div>
                 <Table bordered>
                     <thead>
@@ -67,7 +67,7 @@ class Habitacion extends Component {
                             <th>Descripcion</th>
                         </tr>
                     </thead>
-                    
+                    {list.map((d, index) =>
                         <tbody key={index}>
                             <tr>
                                 <th scope="row">{index + 1}</th>
@@ -80,7 +80,7 @@ class Habitacion extends Component {
                                 
                             </tr>
                         </tbody>
-                    
+                    )}
                 </Table>
                 <Pagination
                     total={total}
@@ -161,7 +161,7 @@ class Habitacion extends Component {
                         )}
                 </Pagination>
                 </div>
-            )}
+            
             </div>
         );
     }

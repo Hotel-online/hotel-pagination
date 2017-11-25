@@ -16,11 +16,8 @@ import {
 
 
 const list = [
-    ['apple'],
-    ['banana'],
-    ['coconut'],
-    ['payaya'],
-    ['pear'],
+    [PropTypes.array],
+
 ];
 
 const limit = 2;
@@ -71,7 +68,7 @@ class Habitacion extends Component {
                         </tr>
                     </thead>
                     
-                        <tbody>
+                        <tbody key={index}>
                             <tr>
                                 <th scope="row">{index + 1}</th>
                                 <th scope="row">{d.numero}</th>
